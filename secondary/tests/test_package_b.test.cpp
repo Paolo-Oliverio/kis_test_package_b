@@ -1,0 +1,8 @@
+#include <kis_test_package_b/kis_test_package_b.hpp>
+
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include <doctest/doctest.h>
+
+TEST_CASE("Fake test that always passes") {
+    CHECK(true);
+}
