@@ -3,6 +3,7 @@
 set(PACKAGE_NAME "kis_test_package_b")
 set(PACKAGE_VERSION "0.1.0")
 set(PACKAGE_VERSION_MAJOR "0")
+set(PACKAGE_TYPE "STATIC")
 set(PACKAGE_DESCRIPTION "A basic package.")
 
 set(PACKAGE_DEPENDENCIES
