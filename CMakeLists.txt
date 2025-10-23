@@ -4,9 +4,9 @@
 # This script handles finding or fetching `kis_build_system` in standalone mode.
 cmake_minimum_required(VERSION 3.20)
 include(cmake/package_setup.cmake)
-
+set(PACKAGE_NAME "kis_test_package_b")
+set(PACKAGE_VERSION "0.1.0")
 # 2. Load package metadata (name, version, dependencies).
-include(kis.package.cmake)
 project(${PACKAGE_NAME} VERSION ${PACKAGE_VERSION})
 
 # 3. Handle first-party dependencies (other kis_ packages).
@@ -38,7 +38,7 @@ target_include_directories(${PACKAGE_NAME} PUBLIC
 )
 
 # 7. Link to other dependencies.
-kis_link_dependencies(TARGET kis_test_package_b PRIVATE kis::kis_test_package_a)
+kis_defer_link_dependencies(TARGET kis_test_package_b PRIVATE kis::kis_test_package_a)
 
 # 8. Install the package artifacts (library, headers, CMake config).
 kis_install_package()

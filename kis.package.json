@@ -1,0 +1,23 @@
+{
+  "name": "kis_test_package_b",
+  "version": "0.1.0",
+  "type": "LIBRARY",
+  "description": "A basic package.",
+  "dependencies": {
+    "kis": [
+      {
+        "name": "kis_test_package_a",
+        "url": "https://github.com/Paolo-Oliverio/kis_test_package_a.git",
+        "tag": "main"
+      }
+    ],
+    "thirdParty": [
+      {
+        "name": "doctest",
+        "git": "https://github.com/doctest/doctest.git",
+        "tag": "v2.4.12",
+        "condition": "KIS_BUILD_TESTS"
+      }
+    ]
+  }
+}

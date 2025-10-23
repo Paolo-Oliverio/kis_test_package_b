@@ -2,11 +2,6 @@
 if(KIS_BUILD_TESTS)
     enable_testing()
     # Assumes CTest or similar is configured.
-
-    kis_handle_dependency(doctest
-        GIT_REPOSITORY https://github.com/doctest/doctest.git
-        GIT_TAG        ${KIS_THIRDPARTY_DOCTEST_VERSION}
-    )
     
     kis_add_test(kis_test_package_b_tests
         SOURCES
